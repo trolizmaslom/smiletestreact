@@ -1,0 +1,24 @@
+.sku{ display: flex;  border-bottom: 1px solid rgba(43, 46, 64, 0.11); padding: 38px 26px; min-height: 258px;
+  &__left{border-right: 1px solid rgba(43, 46, 64, 0.06); display: flex; width: 636px; }
+  &__right{  display: flex; align-items: center; width: 317px; position: relative; justify-content: space-between; padding-left: 46px; padding-bottom: 14px; }
+  &__img{width: 131px; height: 131px; border-radius: 10px; box-shadow: 0 11px 20px 0 rgba(0,0,0,0.08); background-color: #fff; padding: 22px; flex-grow: 0; flex-shrink: 0; margin-right: 40px;
+    img{width: 100%;height: 100%; object-fit: cover; border-radius: 8px; overflow: hidden;}
+  }
+  &__title{font-size: 20px; font-weight: 600; color: #191919; margin-top: -5px; margin-bottom: 20px;}
+  &__description{font-weight: 400; font-size: 16px; color: #7D7D7D; text-align: left; margin-bottom: 46px;}
+  &__select{width: 242px;}
+  &__delete{position: absolute; right: 3px;top: -5px;
+    button{padding: 0; background-color: transparent; border: 0; box-shadow: none;}
+  }
+  &__counter{ width: 137px; }
+  &__price{font-size: 20px; white-space: nowrap;}
+}
+.my-custom-select{ border:1px solid #DCDCDC; border-radius: 2px; height: 51px;
+  .my-arrow{border-top:12px solid #848484; border-right:7px solid transparent; border-left:7px solid transparent; border-bottom:0px solid transparent; transform:rotate(0); margin: 0;}
+  .my-arrow-zone{position: absolute; right: 13px;top: 0; height: 100%; align-items: center; }
+  .my-control{border:0; height: 49px;}
+  .my-option,
+  .my-placeholder,
+  .my-value{line-height: 49px; font-size: 14px; color: #4E4E4E; font-family:'Work Sans'; text-transform: uppercase;}
+}
+.card{padding: 50px; background-color: #fff; box-shadow: 0 25px 54px 0 rgba(0,0,0,0.11); z-index: 10; position: relative;}

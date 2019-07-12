@@ -1,0 +1,10 @@
+.sku{
+  &__counter-button{background-color: transparent; padding: 0; border:1px solid #DCDCDC; border-radius: 2px; box-shadow: none; width: 39px; height: 39px; position: relative; flex-shrink: 0;
+    &:before{content: ''; display: block; width: 15px; height: 1px; background-color: #4e4e4e; left: 11px; top: 18px; position: absolute; }
+    &--plus:after{content: ''; display: block; width: 1px; height: 15px; background-color: #4e4e4e; left: 18px; top: 11px; position: absolute;}
+  }
+  &__counter{
+    input{border:0; line-height: 39px; text-align: center; width: 100%;}
+    &--wrap{width: 100%; display: flex; justify-content: space-between;}
+  }
+}
