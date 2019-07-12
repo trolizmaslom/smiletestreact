@@ -14,11 +14,11 @@
   &__price{font-size: 20px; white-space: nowrap;}
 }
 .my-custom-select{ border:1px solid #DCDCDC; border-radius: 2px; height: 51px;
-  .my-arrow{border-top:12px solid #848484; border-right:7px solid transparent; border-left:7px solid transparent; border-bottom:0px solid transparent; transform:rotate(0); margin: 0;}
+  .my-arrow{border-top:12px solid #848484; border-right:7px solid transparent; border-left:7px solid transparent; border-bottom:0; transform:rotate(0); margin: 0;}
   .my-arrow-zone{position: absolute; right: 13px;top: 0; height: 100%; align-items: center; }
   .my-control{border:0; height: 49px;}
   .my-option,
   .my-placeholder,
-  .my-value{line-height: 49px; font-size: 14px; color: #4E4E4E; font-family:'Work Sans'; text-transform: uppercase;}
+  .my-value{line-height: 49px; font-size: 14px; color: #4E4E4E; text-transform: uppercase;}
 }
 .card{padding: 50px; background-color: #fff; box-shadow: 0 25px 54px 0 rgba(0,0,0,0.11); z-index: 10; position: relative;}

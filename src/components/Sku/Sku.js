@@ -12,9 +12,10 @@ export class Sku extends PureComponent{
         options: this.props.item.sku.map(sku => {
                     return { label:  sku.label, value: sku.id}
                 }),
+        activeValue: this.props.item.sku[0].id,
         sku: [...this.props.item.sku],
-        min: this.props.item.sku[0].minQuantity ? this.props.item.sku[0].minQuantity : 1,
-        max: this.props.item.sku[0].maxQuantity ? this.props.item.sku[0].maxQuantity : 0,
+        min: this.props.item.sku[0]['minQuantity'] ? this.props.item.sku[0]['minQuantity'] : 1,
+        max: this.props.item.sku[0]['maxQuantity'] ? this.props.item.sku[0]['maxQuantity'] : 0,
         price: this.props.item.sku[0].price,
         oneItemPrice: this.props.item.sku[0].price,
         count: 1,
@@ -26,7 +27,8 @@ export class Sku extends PureComponent{
             return {
                 price: price,
                 oneItemPrice: elem.price,
-                image: elem.image
+                image: elem.image,
+                activeValue: id
             }
         }, () => {
             this.props.chengedTotal(price, this.state.id);
@@ -41,13 +43,11 @@ export class Sku extends PureComponent{
         }, () => {
             this.props.chengedTotal(price, this.state.id);
         });
-
     };
     deleteItem = () => {
         this.props.deleteItem(this.state.id);
     };
     render(){
-
         const item  = this.state;
         return (
             <div className = "sku">
@@ -61,7 +61,7 @@ export class Sku extends PureComponent{
                         <div className = "sku__description">{item.subtitle}</div>
                         <div className = "sku__select">
                             <Select
-                                value = {item.options[0].value}
+                                value = {item.activeValue}
                                 className = "my-custom-select"
                                 searchable = {false}
                                 onChange = {this.selectChange}
